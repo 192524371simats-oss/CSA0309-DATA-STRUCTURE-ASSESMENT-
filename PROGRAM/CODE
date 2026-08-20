@@ -1,1 +1,18 @@
+#include <stdio.h>
 
+int main() {
+    char str[100], stack[100];
+    int top = -1, i;
+
+    scanf("%s", str);
+
+    for (i = 0; str[i] != '\0'; i++)
+        stack[++top] = str[i];
+
+    printf("Reversed String: ");
+
+    while (top >= 0)
+        printf("%c", stack[top--]);
+
+    return 0;
+}
